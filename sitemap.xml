@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/tags/blog/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/tags/blog/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/posts/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/posts/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/tags/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/tags/welcome/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/tags/welcome/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/posts/welcome/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/posts/welcome/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/about/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/authors/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/authors/</loc>
   </url><url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/categories/</loc>
   </url><url>
-    <loc>http://www.example.com/contact/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/contact/</loc>
   </url><url>
-    <loc>http://www.example.com/food/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/food/</loc>
   </url><url>
-    <loc>http://www.example.com/learn/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/learn/</loc>
   </url><url>
-    <loc>http://www.example.com/projects/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/projects/</loc>
   </url><url>
-    <loc>http://www.example.com/series/</loc>
+    <loc>https://github.com/blacksheeprobotics/launchpad/series/</loc>
   </url>
 </urlset>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blacksheep Development</title>
-    <link>http://www.example.com/tags/</link>
+    <link>https://github.com/blacksheeprobotics/launchpad/tags/</link>
     <description>Recent content in Tags on Blacksheep Development</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/blacksheeprobotics/launchpad/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>http://www.example.com/tags/blog/</link>
+      <link>https://github.com/blacksheeprobotics/launchpad/tags/blog/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/tags/blog/</guid>
+      <guid>https://github.com/blacksheeprobotics/launchpad/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Welcome</title>
-      <link>http://www.example.com/tags/welcome/</link>
+      <link>https://github.com/blacksheeprobotics/launchpad/tags/welcome/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/tags/welcome/</guid>
+      <guid>https://github.com/blacksheeprobotics/launchpad/tags/welcome/</guid>
       <description></description>
     </item>
   </channel>
