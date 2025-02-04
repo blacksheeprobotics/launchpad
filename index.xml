@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blacksheep Development</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Blacksheep Development</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to my Blog!</title>
+      <link>http://localhost:1313/posts/welcome/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/welcome/</guid>
+      <description>&lt;p&gt;Hey there! 👋&lt;/p&gt;&#xA;&lt;p&gt;Welcome to my little corner of the internet, where I share my passion for &lt;strong&gt;electronics, programming, robotics, and space&lt;/strong&gt;—basically, all things tech and beyond! 🚀 But it’s not just about circuits and code—expect some &lt;strong&gt;delicious cooking recipes, coffee adventures, and travel stories&lt;/strong&gt; along the way. After all, great ideas (and great robots) run on good food, strong coffee, and a bit of exploration.&lt;/p&gt;&#xA;&lt;p&gt;Whether you&amp;rsquo;re here to tinker with hardware, dive into software, explore the cosmos, or discover new flavors and places, I hope you find inspiration and something new to learn.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Welcome to my corner of the web!&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m passionate about robotics, artificial intelligence, and rocketry—pushing the boundaries of what&amp;rsquo;s possible and imagining the future. By day, I&amp;rsquo;m a developer and firmware engineer, turning ideas into tangible solutions and navigating the world of embedded systems. I&amp;rsquo;m also a proud father, balancing the joys of parenthood with a career in tech.&lt;/p&gt;&#xA;&lt;p&gt;By night, I&amp;rsquo;m a maker at heart. You&amp;rsquo;ll often find me tinkering with new ideas, diving into hands-on projects, and exploring creative ways to bring concepts to life. Whether it&amp;rsquo;s designing the next robotics prototype, experimenting with AI algorithms, or dreaming up rocketry innovations, my mind is always buzzing with possibilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;Email me at &lt;a href=&#34;mailto:blacksheeprobotics@gmail.com&#34; &gt;blacksheeprobotics@gmail.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Food</title>
+      <link>http://localhost:1313/food/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/food/</guid>
+      <description>&lt;p&gt;Nothing to see here&amp;hellip; Move along!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Learn</title>
+      <link>http://localhost:1313/learn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/learn/</guid>
+      <description>&lt;p&gt;Nothing to see here&amp;hellip; Move along!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;p&gt;Nothing to see here&amp;hellip; Move along!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

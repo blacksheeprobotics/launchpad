@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome on Blacksheep Development</title>
+    <link>http://localhost:1313/tags/welcome/</link>
+    <description>Recent content in Welcome on Blacksheep Development</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/welcome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to my Blog!</title>
+      <link>http://localhost:1313/posts/welcome/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/welcome/</guid>
+      <description>&lt;p&gt;Hey there! 👋&lt;/p&gt;&#xA;&lt;p&gt;Welcome to my little corner of the internet, where I share my passion for &lt;strong&gt;electronics, programming, robotics, and space&lt;/strong&gt;—basically, all things tech and beyond! 🚀 But it’s not just about circuits and code—expect some &lt;strong&gt;delicious cooking recipes, coffee adventures, and travel stories&lt;/strong&gt; along the way. After all, great ideas (and great robots) run on good food, strong coffee, and a bit of exploration.&lt;/p&gt;&#xA;&lt;p&gt;Whether you&amp;rsquo;re here to tinker with hardware, dive into software, explore the cosmos, or discover new flavors and places, I hope you find inspiration and something new to learn.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
