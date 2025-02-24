@@ -2,24 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blacksheep Development</title>
-    <link>https://blacksheeprobotics.github.io/launchpad/tags/</link>
+    <link>http://localhost:1313/launchpad/tags/</link>
     <description>Recent content in Tags on Blacksheep Development</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blacksheeprobotics.github.io/launchpad/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/launchpad/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multiprocessing</title>
+      <link>http://localhost:1313/launchpad/tags/multiprocessing/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/tags/multiprocessing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/launchpad/tags/python/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QNX</title>
+      <link>http://localhost:1313/launchpad/tags/qnx/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/tags/qnx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RPi</title>
+      <link>http://localhost:1313/launchpad/tags/rpi/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/tags/rpi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Threading</title>
+      <link>http://localhost:1313/launchpad/tags/threading/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/tags/threading/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blog</title>
-      <link>https://blacksheeprobotics.github.io/launchpad/tags/blog/</link>
+      <link>http://localhost:1313/launchpad/tags/blog/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blacksheeprobotics.github.io/launchpad/tags/blog/</guid>
+      <guid>http://localhost:1313/launchpad/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Setup</title>
+      <link>http://localhost:1313/launchpad/tags/setup/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/tags/setup/</guid>
       <description></description>
     </item>
     <item>
       <title>Welcome</title>
-      <link>https://blacksheeprobotics.github.io/launchpad/tags/welcome/</link>
+      <link>http://localhost:1313/launchpad/tags/welcome/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blacksheeprobotics.github.io/launchpad/tags/welcome/</guid>
+      <guid>http://localhost:1313/launchpad/tags/welcome/</guid>
       <description></description>
     </item>
   </channel>

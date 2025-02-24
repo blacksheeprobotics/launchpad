@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/launchpad/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=launchpad/livereload" data-no-instant defer></script>
+  <title>
+  Python - Threading · Blacksheep Development
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Blacksheep">
+<meta name="description" content="Sources:
+[1]  Python Threading Tutorial: Run Code Concurrently Using the Threading Module
+Learn [[Python - Multiprocessing]] Here!
+Why use Threading? To speed up the program - run tasks concurrently!
+import threading
+import time
+
+start = time.perf_counter()
+
+def do_something():
+    print(&#39;Sleeping 1 second...&#39;)
+    time.sleep(1)
+    print(f&#34;Done sleeping...&#34;)
+
+threads = []
+
+for i in range(10):
+    t = threading.Thread(target=do_something)
+    t.start()
+    threads.append(t)
+
+for thread in threads:
+    thread.join()
+
+finish = time.perf_counter()
+
+print(f&#39;Finished in {round(finish-start, 2)} second(s)&#39;)
+Results:
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Finished in 1.0 second(s)
+import threading
+import time
+
+start = time.perf_counter()
+
+def do_something(seconds):
+    print(f&#39;Sleeping {seconds} second...&#39;)
+    time.sleep(seconds)
+    print(f&#34;Done sleeping...&#34;)
+
+threads = []
+
+for i in range(10):
+    t = threading.Thread(target=do_something, args=[1.5])
+    t.start()
+    threads.append(t)
+
+for thread in threads:
+    thread.join()
+
+finish = time.perf_counter()
+
+print(f&#39;Finished in {round(finish-start, 2)} second(s)&#39;)
+Here, we&rsquo;re passing number of seconds as an argument for sleep to the func do_something.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python - Threading">
+  <meta name="twitter:description" content="Sources: [1] Python Threading Tutorial: Run Code Concurrently Using the Threading Module
+Learn [[Python - Multiprocessing]] Here!
+Why use Threading? To speed up the program - run tasks concurrently!
+import threading import time start = time.perf_counter() def do_something(): print(&#39;Sleeping 1 second...&#39;) time.sleep(1) print(f&#34;Done sleeping...&#34;) threads = [] for i in range(10): t = threading.Thread(target=do_something) t.start() threads.append(t) for thread in threads: thread.join() finish = time.perf_counter() print(f&#39;Finished in {round(finish-start, 2)} second(s)&#39;) Results:
+Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Finished in 1.0 second(s) import threading import time start = time.perf_counter() def do_something(seconds): print(f&#39;Sleeping {seconds} second...&#39;) time.sleep(seconds) print(f&#34;Done sleeping...&#34;) threads = [] for i in range(10): t = threading.Thread(target=do_something, args=[1.5]) t.start() threads.append(t) for thread in threads: thread.join() finish = time.perf_counter() print(f&#39;Finished in {round(finish-start, 2)} second(s)&#39;) Here, we’re passing number of seconds as an argument for sleep to the func do_something.">
+
+<meta property="og:url" content="http://localhost:1313/launchpad/posts/python---threading/">
+  <meta property="og:site_name" content="Blacksheep Development">
+  <meta property="og:title" content="Python - Threading">
+  <meta property="og:description" content="Sources: [1] Python Threading Tutorial: Run Code Concurrently Using the Threading Module
+Learn [[Python - Multiprocessing]] Here!
+Why use Threading? To speed up the program - run tasks concurrently!
+import threading import time start = time.perf_counter() def do_something(): print(&#39;Sleeping 1 second...&#39;) time.sleep(1) print(f&#34;Done sleeping...&#34;) threads = [] for i in range(10): t = threading.Thread(target=do_something) t.start() threads.append(t) for thread in threads: thread.join() finish = time.perf_counter() print(f&#39;Finished in {round(finish-start, 2)} second(s)&#39;) Results:
+Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Sleeping 1 second... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Done sleeping... Finished in 1.0 second(s) import threading import time start = time.perf_counter() def do_something(seconds): print(f&#39;Sleeping {seconds} second...&#39;) time.sleep(seconds) print(f&#34;Done sleeping...&#34;) threads = [] for i in range(10): t = threading.Thread(target=do_something, args=[1.5]) t.start() threads.append(t) for thread in threads: thread.join() finish = time.perf_counter() print(f&#39;Finished in {round(finish-start, 2)} second(s)&#39;) Here, we’re passing number of seconds as an argument for sleep to the func do_something.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-23T00:00:00+00:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Threading">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/launchpad/posts/python---threading/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/launchpad/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/launchpad/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-dark">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/launchpad/">
+      Blacksheep Development
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/food/">Food</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/links/">Knowledge</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/launchpad/posts/python---threading/">
+              Python - Threading
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-02-23T00:00:00Z">
+                February 23, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/launchpad/tags/python/">Python</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/launchpad/tags/threading/">Threading</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Sources:
+[1]  <a href="https://www.youtube.com/watch?v=IEEhzQoKtQU"  class="external-link" target="_blank" rel="noopener">Python Threading Tutorial: Run Code Concurrently Using the Threading Module</a></p>
+<p>Learn [[Python - Multiprocessing]] Here!</p>
+<p>Why use Threading? To speed up the program - run tasks concurrently!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">do_something</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sleeping 1 second...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Done sleeping...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">do_something</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">thread</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">finish</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Finished in </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">finish</span><span class="o">-</span><span class="n">start</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> second(s)&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Results:</p>
+<pre tabindex="0"><code>Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Sleeping 1 second...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Done sleeping...
+Finished in 1.0 second(s)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">do_something</span><span class="p">(</span><span class="n">seconds</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sleeping </span><span class="si">{</span><span class="n">seconds</span><span class="si">}</span><span class="s1"> second...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Done sleeping...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">do_something</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="mf">1.5</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">thread</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">finish</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Finished in </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">finish</span><span class="o">-</span><span class="n">start</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> second(s)&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Here, we&rsquo;re passing number of seconds as an argument for sleep to the func <code>do_something</code>.</p>
+<p>Alternatively, the new and faster Python threading method is via Thread Pool Executor.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">concurrent.futures</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">do_something</span><span class="p">(</span><span class="n">seconds</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sleeping </span><span class="si">{</span><span class="n">seconds</span><span class="si">}</span><span class="s1"> second(s)...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Done sleeping...</span><span class="si">{</span><span class="n">seconds</span><span class="si">}</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">()</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Method 1: --------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># results are returned in the order they are finished</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#secs = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#results = [executor.submit(do_something, sec) for sec in secs]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#for f in concurrent.futures.as_completed(results):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#    print(f.result())</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Method 2: --------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># map returns results in the order they were started</span>
+</span></span><span class="line"><span class="cl">    <span class="n">secs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">results</span> <span class="o">=</span> <span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">do_something</span><span class="p">,</span> <span class="n">secs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">finish</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Finished in </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">finish</span><span class="o">-</span><span class="n">start</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> second(s)&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>In the example above, ThreadPoolExecutor will automatically create instances of the thread and <code>join()</code> once finished.</p>
+<p>A real world IO-bound example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">concurrent.futures</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">img_urls</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1516117172878-fd2c41f4a759&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1532009324734-20a7a5813719&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1524429656589-6633a470097c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1530224264768-7ff8c1789d79&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1564135624576-c5c88640f235&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1541698444083-023c97d3f4b6&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1522364723953-452d3431c267&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1513938709626-033611b8cc03&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1507143550189-fed454f93097&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1504198453319-5ce911bafcde&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1516972810927-80185027ca84&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1550439062-609e1531270e&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://images.unsplash.com/photo-1549692520-acc6669e2f0c&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">download_image</span><span class="p">(</span><span class="n">img_url</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">img_bytes</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">img_url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
+</span></span><span class="line"><span class="cl">    <span class="n">img_name</span> <span class="o">=</span> <span class="n">img_url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">img_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">img_name</span><span class="si">}</span><span class="s1">.jpg&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">img_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">img_file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">img_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">img_bytes</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">img_name</span><span class="si">}</span><span class="s1"> was downloaded...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">()</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">download_image</span><span class="p">,</span> <span class="n">img_urls</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Finished in </span><span class="si">{</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="si">}</span><span class="s1"> seconds&#39;</span><span class="p">)</span>
+</span></span></code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Blacksheep 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/launchpad/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

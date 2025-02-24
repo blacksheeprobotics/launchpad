@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multiprocessing on Blacksheep Development</title>
+    <link>http://localhost:1313/launchpad/tags/multiprocessing/</link>
+    <description>Recent content in Multiprocessing on Blacksheep Development</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/launchpad/tags/multiprocessing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python - Multiprocessing</title>
+      <link>http://localhost:1313/launchpad/posts/python---multiprocessing/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/posts/python---multiprocessing/</guid>
+      <description>&lt;p&gt;Sources used:&#xA;[1]  &lt;a href=&#34;https://developers.redhat.com/articles/2023/07/27/how-use-python-multiprocessing-module#&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Red Hat Developer - How to use a Python multiprocessing module&lt;/a&gt;&#xA;[2]  &lt;a href=&#34;https://medium.com/@denniswon/process-vs-thread-whats-the-difference-23cb30a772c4&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Process vs Thread: What&amp;rsquo;s the difference?&lt;/a&gt;&#xA;[3]  &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/python-multiprocessing-example&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python Multiprocessing Example&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;YouTube sources:&#xA;[4]  &lt;a href=&#34;https://www.youtube.com/watch?v=fKl2JW_qrso&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python Multiprocessing Tutorial: Run Code in Parallel Using the Multiprocessing Module&lt;/a&gt;&#xA;[5]  &lt;a href=&#34;https://www.youtube.com/watch?v=IEEhzQoKtQU&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python Threading Tutorial&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Learn [[Python - Threading]] Here!&lt;/p&gt;&#xA;&lt;p&gt;Multiprocessing is a Python package that supports spawning processes using an API similar to the threading module [1].&lt;/p&gt;&#xA;&lt;p&gt;In general, a process is the execution of a program whereas a thread is the execution unit part of a process [2]. Whereas a thread is lightweight, a process is heavyweight - processes do not share data and memory with one another while threads do.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

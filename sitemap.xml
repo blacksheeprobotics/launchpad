@@ -2,39 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/</loc>
+    <loc>http://localhost:1313/launchpad/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/tags/multiprocessing/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/posts/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/tags/python/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/posts/python---multiprocessing/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/posts/python---threading/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/tags/qnx/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/posts/qnx-rpi-development-workflow/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/tags/rpi/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/tags/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/tags/threading/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/launchpad/tags/blog/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/tags/blog/</loc>
+    <loc>http://localhost:1313/launchpad/links/qnx_start/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/posts/</loc>
+    <loc>http://localhost:1313/launchpad/links/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/tags/</loc>
+    <loc>http://localhost:1313/launchpad/tags/setup/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/tags/welcome/</loc>
+    <loc>http://localhost:1313/launchpad/tags/welcome/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/posts/welcome/</loc>
+    <loc>http://localhost:1313/launchpad/posts/welcome-to-my-blog/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/about/</loc>
+    <loc>http://localhost:1313/launchpad/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/authors/</loc>
+    <loc>http://localhost:1313/launchpad/authors/</loc>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/categories/</loc>
+    <loc>http://localhost:1313/launchpad/categories/</loc>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/contact/</loc>
+    <loc>http://localhost:1313/launchpad/contact/</loc>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/food/</loc>
+    <loc>http://localhost:1313/launchpad/food/</loc>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/learn/</loc>
+    <loc>http://localhost:1313/launchpad/projects/</loc>
   </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/projects/</loc>
-  </url><url>
-    <loc>https://blacksheeprobotics.github.io/launchpad/series/</loc>
+    <loc>http://localhost:1313/launchpad/series/</loc>
   </url>
 </urlset>

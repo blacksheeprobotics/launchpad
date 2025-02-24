@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QNX on Blacksheep Development</title>
+    <link>http://localhost:1313/launchpad/tags/qnx/</link>
+    <description>Recent content in QNX on Blacksheep Development</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/launchpad/tags/qnx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QNX RPi Development Workflow</title>
+      <link>http://localhost:1313/launchpad/posts/qnx-rpi-development-workflow/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/posts/qnx-rpi-development-workflow/</guid>
+      <description>&lt;p&gt;Source: &lt;a href=&#34;https://www.youtube.com/watch?v=M02X6AqdK7M&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;QNX Toolkit for Visual Studio Code + QNX 8.0 Deep Dive&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you need more info about the image, see the &lt;a href=&#34;https://gitlab.com/qnx/quick-start-images/raspberry-pi-qnx-8.0-quick-start-image/-/wikis/home&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WIKI&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This section is quick summary for myself. Watch the video if you&amp;rsquo;ve never done this before.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Open up VSCode and click on the QNX extension module in the menu bar&lt;/li&gt;&#xA;&lt;li&gt;In &lt;code&gt;QNX COMMANDS &amp;gt; Projects&lt;/code&gt;, select Create new Project&lt;/li&gt;&#xA;&lt;li&gt;Enter the project name in the field&lt;/li&gt;&#xA;&lt;li&gt;In select project template, choose &lt;code&gt;QNX Recursive Makefile&lt;/code&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;introduces a recursive directory tree&lt;/li&gt;&#xA;&lt;li&gt;allows you to compile different binaries for different architectures&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;In select language, choose c or cpp&lt;/li&gt;&#xA;&lt;li&gt;In Select artifact type of project to build: choose Executable&lt;/li&gt;&#xA;&lt;li&gt;Write your code&lt;/li&gt;&#xA;&lt;li&gt;To build, right click on the project name in the explorer&lt;/li&gt;&#xA;&lt;li&gt;Scroll down to the QNX tab, hover and select &lt;code&gt;Build Active Project&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;To run the code on the QNX device, right click project name in explorer. Scroll down to the QNX tab and select &lt;code&gt;Run As QNX Application&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;If you haven&amp;rsquo;t chosen a target yet, QNX will ask you for a target&lt;/li&gt;&#xA;&lt;li&gt;Click the QNX extension module and create the target in QNX TARGETS&lt;/li&gt;&#xA;&lt;li&gt;For the RPi, get its IP address on the network (like Angry IP Scanner or in serial terminal, use ifconfig)&lt;/li&gt;&#xA;&lt;li&gt;Get the address and return to VS Code and enter it to &lt;code&gt;Add new QNX Target Connection&lt;/code&gt; in QNX TARGETS&lt;/li&gt;&#xA;&lt;li&gt;To access target via SSH, use:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; ssh -m hmac-sha2-512 qnxuser@qnxpi.local&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Handle for QNX Blurp!</title>
+      <link>http://localhost:1313/launchpad/links/qnx_start/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/launchpad/links/qnx_start/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

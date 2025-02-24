@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/launchpad/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=launchpad/livereload" data-no-instant defer></script>
+  <title>
+  Python - Multiprocessing · Blacksheep Development
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Blacksheep">
+<meta name="description" content="Sources used:
+[1]  Red Hat Developer - How to use a Python multiprocessing module
+[2]  Process vs Thread: What&rsquo;s the difference?
+[3]  Python Multiprocessing Example
+YouTube sources:
+[4]  Python Multiprocessing Tutorial: Run Code in Parallel Using the Multiprocessing Module
+[5]  Python Threading Tutorial
+Learn [[Python - Threading]] Here!
+Multiprocessing is a Python package that supports spawning processes using an API similar to the threading module [1].
+In general, a process is the execution of a program whereas a thread is the execution unit part of a process [2]. Whereas a thread is lightweight, a process is heavyweight - processes do not share data and memory with one another while threads do.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python - Multiprocessing">
+  <meta name="twitter:description" content="Sources used: [1] Red Hat Developer - How to use a Python multiprocessing module [2] Process vs Thread: What’s the difference? [3] Python Multiprocessing Example
+YouTube sources: [4] Python Multiprocessing Tutorial: Run Code in Parallel Using the Multiprocessing Module [5] Python Threading Tutorial
+Learn [[Python - Threading]] Here!
+Multiprocessing is a Python package that supports spawning processes using an API similar to the threading module [1].
+In general, a process is the execution of a program whereas a thread is the execution unit part of a process [2]. Whereas a thread is lightweight, a process is heavyweight - processes do not share data and memory with one another while threads do.">
+
+<meta property="og:url" content="http://localhost:1313/launchpad/posts/python---multiprocessing/">
+  <meta property="og:site_name" content="Blacksheep Development">
+  <meta property="og:title" content="Python - Multiprocessing">
+  <meta property="og:description" content="Sources used: [1] Red Hat Developer - How to use a Python multiprocessing module [2] Process vs Thread: What’s the difference? [3] Python Multiprocessing Example
+YouTube sources: [4] Python Multiprocessing Tutorial: Run Code in Parallel Using the Multiprocessing Module [5] Python Threading Tutorial
+Learn [[Python - Threading]] Here!
+Multiprocessing is a Python package that supports spawning processes using an API similar to the threading module [1].
+In general, a process is the execution of a program whereas a thread is the execution unit part of a process [2]. Whereas a thread is lightweight, a process is heavyweight - processes do not share data and memory with one another while threads do.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-23T00:00:00+00:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Multiprocessing">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/launchpad/posts/python---multiprocessing/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/launchpad/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/launchpad/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-dark">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/launchpad/">
+      Blacksheep Development
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/food/">Food</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/links/">Knowledge</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/launchpad/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/launchpad/posts/python---multiprocessing/">
+              Python - Multiprocessing
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-02-23T00:00:00Z">
+                February 23, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/launchpad/tags/python/">Python</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/launchpad/tags/multiprocessing/">Multiprocessing</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Sources used:
+[1]  <a href="https://developers.redhat.com/articles/2023/07/27/how-use-python-multiprocessing-module#"  class="external-link" target="_blank" rel="noopener">Red Hat Developer - How to use a Python multiprocessing module</a>
+[2]  <a href="https://medium.com/@denniswon/process-vs-thread-whats-the-difference-23cb30a772c4"  class="external-link" target="_blank" rel="noopener">Process vs Thread: What&rsquo;s the difference?</a>
+[3]  <a href="https://www.digitalocean.com/community/tutorials/python-multiprocessing-example"  class="external-link" target="_blank" rel="noopener">Python Multiprocessing Example</a></p>
+<p>YouTube sources:
+[4]  <a href="https://www.youtube.com/watch?v=fKl2JW_qrso"  class="external-link" target="_blank" rel="noopener">Python Multiprocessing Tutorial: Run Code in Parallel Using the Multiprocessing Module</a>
+[5]  <a href="https://www.youtube.com/watch?v=IEEhzQoKtQU"  class="external-link" target="_blank" rel="noopener">Python Threading Tutorial</a></p>
+<p>Learn [[Python - Threading]] Here!</p>
+<p>Multiprocessing is a Python package that supports spawning processes using an API similar to the threading module [1].</p>
+<p>In general, a process is the execution of a program whereas a thread is the execution unit part of a process [2]. Whereas a thread is lightweight, a process is heavyweight - processes do not share data and memory with one another while threads do.</p>
+<p>A process executes a program; you can have multiple processes executing the same program, but each process has its own copy of the program within its own address space and executes it independently of the other copies.&quot; [2]</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">child_process</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m a child process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Here we create a new instance of the Process class and assign our</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># `child_process` function to be executed.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">child_process</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># We then start the process</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># And finally, we join the process. This will make our script to hang and</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># wait until the child process is done.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;AFTER CHILD EXECUTION! RIGHT?!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Remember to use <code>.join()</code> to wait for your child process to execute and finish. Use <code>.join()</code> wisely as it will determine how you want the module to perform. The output above will be:</p>
+<pre tabindex="0"><code>Hi! I&#39;m process 4172
+Hi! I&#39;m a child process 5372
+AFTER CHILD EXECUTION! RIGHT?!
+</code></pre><p>However, had we swapped the last line before <code>process.join()</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="c1"># We then start the process</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;AFTER CHILD EXECUTION! RIGHT?!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># And finally, we join the process. This will make our script to hang and</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># wait until the child process is done.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span></code></pre></div><p>The result would be:</p>
+<pre tabindex="0"><code>Hi! I&#39;m process 19024
+AFTER CHILD EXECUTION! RIGHT?!
+Hi! I&#39;m a child process 23108
+</code></pre><h2 id="communication-between-child-and-parent-process">
+  Communication between child and parent process
+  <a class="heading-link" href="#communication-between-child-and-parent-process">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>How do you return data from a child process? One would think to use the <code>return</code> statement but in processes, it is not allowed because of isolation. Instead, we use the queue (FIFO, first-in-first-out) class, which will provide an interface to communicate data between the parent and child process. &lsquo;Nuff talking, let&rsquo;s see an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">child_process</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m a child process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">. I do calculations.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">sum</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Putting data into the queue</span>
+</span></span><span class="line"><span class="cl">    <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Defining a new Queue()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">queue</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Here we create a new instance of the Process class and assign our</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># `child_process` function to be executed. Note the difference now that</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># we are using the `args` parameter now, this means that we can pass</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># down parameters to the function being executed as a child process.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">child_process</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># We then start the process</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># And finally, we join the process. This will make our script to hang and</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># wait until the child process is done.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Accessing the result from the queue.</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Got the result from child process as </span><span class="si">{</span><span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="exception-handling-for-the-process-class">
+  Exception handling for the process class
+  <a class="heading-link" href="#exception-handling-for-the-process-class">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Exceptions that occurs inside a child process will always be handled by the <code>Process</code> class that spawned it [1].</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">child_process</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m a child process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;Oh no! :(&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Here we create a new instance of the Process class and assign our</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># `child_process` function to be executed. Note the difference now that</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># we are using the `args` parameter now, this means that we can pass</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># down parameters to the function being executed as a child process.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">child_process</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># We then start the process</span>
+</span></span><span class="line"><span class="cl">        <span class="n">process</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># And finally, we join the process. This will make our script to hang and</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># wait until the child process is done.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">process</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;AFTER CHILD EXECUTION! RIGHT?!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Uhhh... It failed?&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>With a result:</p>
+<pre tabindex="0"><code>Hi! I&#39;m process 24836
+Hi! I&#39;m a child process 29336.
+Process Process-1:
+Traceback (most recent call last):
+  File &#34;\process.py&#34;, line 314, in _bootstrap
+    self.run()
+  File &#34;\process.py&#34;, line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File &#34;\test.py&#34;, line 7, in child_process   
+    raise Exception(&#34;Oh no! :(&#34;)
+Exception: Oh no! :(
+AFTER CHILD EXECUTION! RIGHT?!
+</code></pre><p>This tells us that the parent process is still running even though the child process threw an exception. Instead, we should handle the exceptions inside the child process:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">child_process</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m a child process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;Oh no! :(&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Uh, I think it&#39;s fine now...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi! I&#39;m process </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Here we create a new instance of the Process class and assign our</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># `child_process` function to be executed. Note the difference now that</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># we are using the `args` parameter now, this means that we can pass</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># down parameters to the function being executed as a child process.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">child_process</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># We then start the process</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># And finally, we join the process. This will make our script to hang and</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># wait until the child process is done.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;AFTER CHILD EXECUTION! RIGHT?!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>And the output:</p>
+<pre tabindex="0"><code>Hi! I&#39;m process 28124
+Hi! I&#39;m a child process 2824.
+Uh, I think it&#39;s fine now...
+AFTER CHILD EXECUTION! RIGHT?!
+</code></pre><p>In the following sections below, we will be</p>
+<p>Key takeaway points when using Multiprocessing package:</p>
+<ul>
+<li>start/join: for every process <code>start</code>, keep track and then <code>join</code> the process</li>
+<li>use <code>queue</code> for child-parent data/return communications</li>
+<li>handle exceptions within the process itself as they run independently</li>
+<li>use for-loops to distribute loads and track with <code>args</code></li>
+</ul>
+<p>Happy Multiprocessing!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Blacksheep 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/launchpad/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
